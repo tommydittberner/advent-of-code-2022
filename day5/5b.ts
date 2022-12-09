@@ -1,4 +1,4 @@
-// https://adventofcode.com/2022/day/4
+// https://adventofcode.com/2022/day/5
 import * as fs from 'fs';
 const input = fs.readFileSync('5_input.txt','utf8').split('\n\n');
 
