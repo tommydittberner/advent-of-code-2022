@@ -1,8 +1,7 @@
 "use strict";
-exports.__esModule = true;
-// https://adventofcode.com/2022/day/7
-var fs = require("fs");
-var lines = fs.readFileSync('7_input.txt', 'utf8').split('\n');
+Object.defineProperty(exports, "__esModule", { value: true });
+var readInput_1 = require("../readInput");
+var lines = (0, readInput_1.default)('7_input.txt');
 var sizes = new Map();
 var children = new Map();
 var path = [];
@@ -48,7 +47,6 @@ var resSum = 0;
 children.forEach(function (v, k) {
     var size = 0;
     size += dfs(k, size);
-    console.log(k, size);
     if (size <= 100000) {
         resSum += size;
     }

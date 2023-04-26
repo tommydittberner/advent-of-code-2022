@@ -1,8 +1,7 @@
 "use strict";
-exports.__esModule = true;
-// https://adventofcode.com/2022/day/4
-var fs = require("fs");
-var lines = fs.readFileSync('4_input.txt', 'utf8').split('\n');
+Object.defineProperty(exports, "__esModule", { value: true });
+var readInput_1 = require("../readInput");
+var lines = (0, readInput_1.default)("4_input.txt");
 var sum = 0;
 lines.forEach(function (line) {
     var elves = line.split(',');

@@ -1,6 +1,5 @@
-// https://adventofcode.com/2022/day/7
-import * as fs from 'fs';
-const lines: string[] = fs.readFileSync('7_input.txt','utf8').split('\n');
+import readInput from '../readInput';
+const lines: string[] = readInput('7_input.txt');
 
 let sizes = new Map<string, number>();
 let children = new Map<string, string[]>();
@@ -53,7 +52,6 @@ function dfs(key: string, size: number) {
 const freeSpace = 70_000_000 - dfs("/", 0);
 const spaceToFree = 30_000_000 - freeSpace;
 
-console.log(spaceToFree);
 let nearestBiggerDirSize = 0;
 
 children.forEach((v, k) => {
@@ -62,7 +60,6 @@ children.forEach((v, k) => {
 
     if (nearestBiggerDirSize === 0 || 
         (size >= spaceToFree && spaceToFree < nearestBiggerDirSize)) {
-        console.log(k, size);
         nearestBiggerDirSize = size;
     }
 });

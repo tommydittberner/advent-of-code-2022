@@ -1,6 +1,8 @@
-// https://adventofcode.com/2022/day/6
+import readInput from '../readInput';
 import * as fs from 'fs';
-const chars: string[] = fs.readFileSync('6_input.txt','utf8').split('');
+import * as path from 'path';
+const chars = fs.readFileSync(path.join(__dirname, '6_input.txt'), 'utf8').split('');
+//const chars: string[] = readInput('6_input.txt', new RegExp(/''/g));
 
 const sizeOfPack = 4;
 for (let i = sizeOfPack - 1; i < chars.length; i++) {
@@ -15,4 +17,3 @@ for (let i = sizeOfPack - 1; i < chars.length; i++) {
         break;
     }
 };
-

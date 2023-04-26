@@ -1,6 +1,5 @@
-// https://adventofcode.com/2022/day/7
-import * as fs from 'fs';
-const lines: string[] = fs.readFileSync('7_input.txt','utf8').split('\n');
+import readInput from '../readInput';
+const lines: string[] = readInput('7_input.txt');
 
 let sizes = new Map<string, number>();
 let children = new Map<string, string[]>();
@@ -55,7 +54,6 @@ let resSum = 0;
 children.forEach((v, k) => {
     let size = 0;
     size += dfs(k, size);
-    console.log(k, size);
 
     if (size <= 100_000) {
         resSum += size;

@@ -1,8 +1,7 @@
 "use strict";
-exports.__esModule = true;
-// https://adventofcode.com/2022/day/9
-var fs = require("fs");
-var instructions = fs.readFileSync('9_input.txt', 'utf8').split('\n');
+Object.defineProperty(exports, "__esModule", { value: true });
+var readInput_1 = require("../readInput");
+var instructions = (0, readInput_1.default)('9_input.txt');
 var visited = new Set();
 var knots = [];
 // create 10 knots at the starting position

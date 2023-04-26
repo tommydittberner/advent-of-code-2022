@@ -1,6 +1,5 @@
-// https://adventofcode.com/2022/day/10
-import * as fs from 'fs';
-const operations: string[] = fs.readFileSync('10_input.txt','utf8').split('\n');
+import readInput from '../readInput';
+const operations: string[] = readInput('10_input.txt');
 
 const output: string[] = [];
 

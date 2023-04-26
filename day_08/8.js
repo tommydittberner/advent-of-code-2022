@@ -1,8 +1,7 @@
 "use strict";
-exports.__esModule = true;
-// https://adventofcode.com/2022/day/8
-var fs = require("fs");
-var rows = fs.readFileSync('8_input.txt', 'utf8').split('\n');
+Object.defineProperty(exports, "__esModule", { value: true });
+var readInput_1 = require("../readInput");
+var rows = (0, readInput_1.default)('8_input.txt');
 var grid = [];
 rows.forEach(function (tree) { return grid.push(tree.split('')); });
 // outer grid already added

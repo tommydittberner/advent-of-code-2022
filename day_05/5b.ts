@@ -1,6 +1,6 @@
-// https://adventofcode.com/2022/day/5
-import * as fs from 'fs';
-const input = fs.readFileSync('5_input.txt','utf8').split('\n\n');
+import readInput from '../readInput';
+
+const input: string[] = readInput("5_input.txt", new RegExp(/\r?\n\r?\n/g));
 
 const start = input[0];
 const orders = input[1];

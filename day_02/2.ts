@@ -1,7 +1,6 @@
-// https://adventofcode.com/2022/day/2
+import readInput from '../readInput';
 
-import * as fs from 'fs';
-const games: string[] = fs.readFileSync('2_input.txt','utf8').split('\n');
+const games: string[] = readInput("2_input.txt");
 
 const points = new Map<string, number>();
 points.set('A', 1);

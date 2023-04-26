@@ -1,8 +1,7 @@
 "use strict";
-exports.__esModule = true;
-// https://adventofcode.com/2022/day/9
-var fs = require("fs");
-var instructions = fs.readFileSync('9_input.txt', 'utf8').split('\n');
+Object.defineProperty(exports, "__esModule", { value: true });
+var readInput_1 = require("../readInput");
+var instructions = (0, readInput_1.default)('9_input.txt');
 var visited = new Set();
 var hX = 0;
 var hY = 0;
@@ -13,6 +12,7 @@ function move(x, y) {
     hY += y;
     if (moveTail(hX, hY, tX, tY)) {
         // move 0, -1 or 1
+        // e.g: -2 / 2 = -1
         tX += hX === tX ? 0 : (hX - tX) / (Math.abs(hX - tX));
         tY += hY === tY ? 0 : (hY - tY) / (Math.abs(hY - tY));
     }

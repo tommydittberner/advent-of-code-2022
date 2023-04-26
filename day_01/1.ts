@@ -1,10 +1,9 @@
-// https://adventofcode.com/2022/day/1
+import readInput from '../readInput';
 
-import * as fs from 'fs';
-const input = fs.readFileSync('1_input.txt','utf8').split('\n');
+const input: string[] = readInput("1_input.txt");
 
 let res = new Map<number, number>();
-let currSum = 0;
+let currSum: number = 0;
 
 input.forEach((entry, idx) => {
     if (entry !== '') {
@@ -22,4 +21,3 @@ console.log(sortedArr[0]);
 
 // Part 2
 console.log(sortedArr.slice(0, 3).reduce((sum, curr) => sum + curr));
-

@@ -1,9 +1,7 @@
 "use strict";
-exports.__esModule = true;
-// https://adventofcode.com/2022/day/11
-var fs = require("fs");
-var input = fs.readFileSync('11_input.txt', 'utf8')
-    .split('\n\n')
+Object.defineProperty(exports, "__esModule", { value: true });
+var readInput_1 = require("../readInput");
+var input = (0, readInput_1.default)("11_input.txt", new RegExp(/\r?\n\r?\n/g))
     .map(function (monkey) { return monkey.split('\n'); });
 var numOfRounds = 20;
 var numOfMonkeys;

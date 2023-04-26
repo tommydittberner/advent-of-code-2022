@@ -1,8 +1,7 @@
 "use strict";
-// https://adventofcode.com/2022/day/1
-exports.__esModule = true;
-var fs = require("fs");
-var input = fs.readFileSync('1_input.txt', 'utf8').split('\n');
+Object.defineProperty(exports, "__esModule", { value: true });
+var readInput_1 = require("../readInput");
+var input = (0, readInput_1.default)("1_input.txt");
 var res = new Map();
 var currSum = 0;
 input.forEach(function (entry, idx) {

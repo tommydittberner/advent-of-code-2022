@@ -1,8 +1,7 @@
 "use strict";
-exports.__esModule = true;
-// https://adventofcode.com/2022/day/7
-var fs = require("fs");
-var lines = fs.readFileSync('7_input.txt', 'utf8').split('\n');
+Object.defineProperty(exports, "__esModule", { value: true });
+var readInput_1 = require("../readInput");
+var lines = (0, readInput_1.default)('7_input.txt');
 var sizes = new Map();
 var children = new Map();
 var path = [];
@@ -45,16 +44,13 @@ function dfs(key, size) {
     return size;
 }
 var freeSpace = 70000000 - dfs("/", 0);
-;
 var spaceToFree = 30000000 - freeSpace;
-console.log(spaceToFree);
 var nearestBiggerDirSize = 0;
 children.forEach(function (v, k) {
     var size = 0;
     size += dfs(k, size);
     if (nearestBiggerDirSize === 0 ||
         (size >= spaceToFree && spaceToFree < nearestBiggerDirSize)) {
-        console.log(k, size);
         nearestBiggerDirSize = size;
     }
 });

@@ -8,10 +8,10 @@ var __spreadArray = (this && this.__spreadArray) || function (to, from, pack) {
     }
     return to.concat(ar || Array.prototype.slice.call(from));
 };
-exports.__esModule = true;
-// https://adventofcode.com/2022/day/4
+Object.defineProperty(exports, "__esModule", { value: true });
 var fs = require("fs");
-var input = fs.readFileSync('5_input.txt', 'utf8').split('\n\n');
+var path = require("path");
+var input = fs.readFileSync(path.join(__dirname, '5_input.txt'), 'utf8').split(/\r?\n\r?\n/);
 var start = input[0];
 var orders = input[1];
 function getRowsBottomUp(lines) {

@@ -1,8 +1,7 @@
 "use strict";
-// https://adventofcode.com/2022/day/3
-exports.__esModule = true;
-var fs = require("fs");
-var allLines = fs.readFileSync('3_input.txt', 'utf8').split('\n');
+Object.defineProperty(exports, "__esModule", { value: true });
+var readInput_1 = require("../readInput");
+var allLines = (0, readInput_1.default)("3_input.txt");
 var values = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var sum = 0;
 var groups = [];
@@ -26,7 +25,7 @@ groups.forEach(function (group) {
             // remove characters not common in other lines from set
             commonCharacters.forEach(function (c) {
                 if (!currentChars.includes(c)) {
-                    commonCharacters["delete"](c);
+                    commonCharacters.delete(c);
                 }
             });
         }

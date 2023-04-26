@@ -1,6 +1,5 @@
-// https://adventofcode.com/2022/day/9
-import * as fs from 'fs';
-const instructions: string[] = fs.readFileSync('9_input.txt','utf8').split('\n');
+import readInput from '../readInput';
+const instructions: string[] = readInput('9_input.txt');
 
 let visited = new Set<string>();
 

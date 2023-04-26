@@ -1,8 +1,9 @@
 "use strict";
-exports.__esModule = true;
-// https://adventofcode.com/2022/day/6
+Object.defineProperty(exports, "__esModule", { value: true });
 var fs = require("fs");
-var chars = fs.readFileSync('6_input.txt', 'utf8').split('');
+var path = require("path");
+var chars = fs.readFileSync(path.join(__dirname, '6_input.txt'), 'utf8').split('');
+//const chars: string[] = readInput('6_input.txt', new RegExp(/''/g));
 var sizeOfPack = 4;
 for (var i = sizeOfPack - 1; i < chars.length; i++) {
     var lastFourSet = new Set();

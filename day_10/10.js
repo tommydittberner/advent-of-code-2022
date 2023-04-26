@@ -1,8 +1,7 @@
 "use strict";
-exports.__esModule = true;
-// https://adventofcode.com/2022/day/10
-var fs = require("fs");
-var operations = fs.readFileSync('10_input.txt', 'utf8').split('\n');
+Object.defineProperty(exports, "__esModule", { value: true });
+var readInput_1 = require("../readInput");
+var operations = (0, readInput_1.default)('10_input.txt');
 var importantCycles = new Map([
     [20, 0], [60, 0], [100, 0], [140, 0], [180, 0], [220, 0],
 ]);

@@ -1,7 +1,7 @@
 "use strict";
-exports.__esModule = true;
-var fs = require("fs");
-var games = fs.readFileSync('2_input.txt', 'utf8').split('\n');
+Object.defineProperty(exports, "__esModule", { value: true });
+var readInput_1 = require("../readInput");
+var games = (0, readInput_1.default)("2_input.txt");
 var points = new Map();
 points.set('A', 1);
 points.set('B', 2);

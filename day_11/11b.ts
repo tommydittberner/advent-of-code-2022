@@ -1,7 +1,6 @@
-// https://adventofcode.com/2022/day/11
-import * as fs from 'fs';
-const input: string[][] = fs.readFileSync('11_input.txt','utf8')
-    .split('\n\n')
+import readInput from '../readInput';
+
+const input: string[][] = readInput("11_input.txt", new RegExp(/\r?\n\r?\n/g))
     .map(monkey => monkey.split('\n'));
 
 let numOfRounds = 10_000;

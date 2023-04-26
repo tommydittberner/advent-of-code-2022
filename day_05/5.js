@@ -1,8 +1,7 @@
 "use strict";
-exports.__esModule = true;
-// https://adventofcode.com/2022/day/4
-var fs = require("fs");
-var input = fs.readFileSync('5_input.txt', 'utf8').split('\n\n');
+Object.defineProperty(exports, "__esModule", { value: true });
+var readInput_1 = require("../readInput");
+var input = (0, readInput_1.default)("5_input.txt", new RegExp(/\r?\n\r?\n/g));
 var start = input[0];
 var orders = input[1];
 function getRowsBottomUp(lines) {

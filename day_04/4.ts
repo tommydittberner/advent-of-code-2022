@@ -1,6 +1,6 @@
-// https://adventofcode.com/2022/day/4
-import * as fs from 'fs';
-const lines: string[] = fs.readFileSync('4_input.txt','utf8').split('\n');
+import readInput from '../readInput';
+
+const lines: string[] = readInput("4_input.txt");
 
 let sum = 0;
 

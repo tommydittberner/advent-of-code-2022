@@ -1,6 +1,5 @@
-// https://adventofcode.com/2022/day/8
-import * as fs from 'fs';
-const rows: string[] = fs.readFileSync('8_input.txt','utf8').split('\n');
+import readInput from '../readInput';
+const rows: string[] = readInput('8_input.txt');
 
 let grid: string[][] = [];
 rows.forEach(tree => grid.push(tree.split('')));
